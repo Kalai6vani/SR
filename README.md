@@ -1,2 +1,2 @@
-#AGROBOT
-A web-based application to assist farmers
+IT'S ALL ABOUT CODES
+
