@@ -22,3 +22,10 @@ I ma fine
 SOLUTION:
 '''
 def reverse(S):
+  L=[S for S in S.split(' ')]
+  print(L[0],end=' ')
+  for i in range(1,len(L)-1):
+    print(L[i][::-1],end=' ')
+  print(L[len(L)-1])
+S=input()
+reverse(S)
