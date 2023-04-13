@@ -1,4 +1,4 @@
-/* ADDITION OR SUBTRACTION WITH X:
+'''ADDITION OR SUBTRACTION WITH X:
 
 The program must accept N integers and an integer X as the input. The program must add X with the even integers among N integers and subtract X from the odd integers 
 among N Integers. Finally, the program must print the modified values of N integers as the output.
@@ -18,21 +18,17 @@ Input:
 Output:
 -3 6 -1 8 1 10 3
 
-SOLUTION:*/
+SOLUTION:'''
 
-#include<stdio.h>
-#include<stdlib.h>
-int main(){
-  int N,X;
-  scanf("%d %d",&N,&X); 
-  int arr[N]; 
-  for(int i=0;i<N;i++){
-    scanf("%d ",&arr[i]); 
-  }for(int i=0;i<N;i++){
-    if(i%2==0){ 
-      printf("%d ", arr[i]+X); 
-    }else{
-      printf("%d", arr[1]-X);
-    }
-  }
-}
+N=int(input())
+L=list(map(int,input().split()))
+X=int(input())
+p=[]
+for i in L:
+  if i%2==0:
+    i+=X
+    p.append(int(i))
+  else:
+    i-=X
+    p.append(int(i))
+print(*p)
